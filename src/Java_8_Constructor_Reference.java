@@ -23,6 +23,9 @@ class Person {
 public class Java_8_Constructor_Reference {
 	public static void main(String[] args) {
 		PersonFactory<Person> personFactory = Person::new;
+		//Above line is identical to below two lines
+		//PersonFactory<Person> personFactory = (a, b) -> { return new Person(a, b); };
+		//PersonFactory<Person> personFactory = (a, b) -> new Person(a, b);
 		System.out.println(personFactory.create("Sonu", "Singh"));
 	}
 }

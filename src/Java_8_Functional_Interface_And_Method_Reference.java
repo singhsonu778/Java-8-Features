@@ -18,6 +18,7 @@ public class Java_8_Functional_Interface_And_Method_Reference {
 		/**********************************************************************/
 
 		Something something = new Something();
+		//Converter<String, String> converter1 = from -> something.startsWith(from);
 		Converter<String, String> converter1 = something::startsWith;
 		System.out.println(converter1.convert("Java"));
 	}
